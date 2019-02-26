@@ -95,7 +95,7 @@
 
 
 
-	PUT /todos/:id
+	PATCH /todos/:id
 
 
 ### Parameters

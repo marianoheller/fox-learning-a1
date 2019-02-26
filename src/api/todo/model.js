@@ -2,7 +2,8 @@ import mongoose, { Schema } from 'mongoose'
 
 const todoSchema = new Schema({
   name: {
-    type: String
+    type: String,
+    required: true
   },
   disabled: {
     type: Boolean,
@@ -11,6 +12,10 @@ const todoSchema = new Schema({
   done: {
     type: Boolean,
     default: false
+  },
+  owner: {
+    type: String,
+    required: true
   }
 }, {
   timestamps: true,
@@ -26,6 +31,7 @@ todoSchema.methods = {
       // simple view
       id: this.id,
       name: this.name,
+      description: this.description,
       disabled: this.disabled,
       done: this.done,
       createdAt: this.createdAt,

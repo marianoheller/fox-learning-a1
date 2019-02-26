@@ -299,7 +299,7 @@ define({ "api": [
     }
   },
   {
-    "type": "put",
+    "type": "patch",
     "url": "/todos/:id",
     "title": "Update todo",
     "name": "UpdateTodo",

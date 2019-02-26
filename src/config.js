@@ -28,6 +28,11 @@ const config = {
     apiRoot: process.env.API_ROOT || '',
     masterKey: requireProcessEnv('MASTER_KEY'),
     jwtSecret: requireProcessEnv('JWT_SECRET'),
+    redis: {
+      host: requireProcessEnv('REDIS_HOST'),
+      port: requireProcessEnv('REDIS_PORT'),
+      password: requireProcessEnv('REDIS_PASSWORD')
+    },
     mongo: {
       options: {
         db: {

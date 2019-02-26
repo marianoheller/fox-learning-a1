@@ -47,7 +47,7 @@ router.get('/:id',
   show)
 
 /**
- * @api {put} /todos/:id Update todo
+ * @api {patch} /todos/:id Update todo
  * @apiName UpdateTodo
  * @apiGroup Todo
  * @apiParam name Todo's name.
@@ -57,7 +57,7 @@ router.get('/:id',
  * @apiError {Object} 400 Some parameters may contain invalid values.
  * @apiError 404 Todo not found.
  */
-router.put('/:id',
+router.patch('/:id',
   body({ name, disabled, done }),
   update)
 
